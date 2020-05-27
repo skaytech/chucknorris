@@ -1,6 +1,13 @@
 document.querySelector('#button').addEventListener('click', fetchJokes);
 document.querySelector('#clear').addEventListener('click', clearContent);
 
+window.addEventListener('DOMContentLoaded', onLoad());
+
+function onLoad() {
+    document.querySelector('input[type="text"]').value = 5;
+    fetchJokes();
+}
+
 function fetchJokes() {
 
     const num = document.querySelector('input[type="text"]').value;
